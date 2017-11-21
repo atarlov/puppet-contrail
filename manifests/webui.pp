@@ -20,6 +20,7 @@ class contrail::webui (
   $admin_user,
   $auth_port,
   $auth_protocol,
+  $auth_version = 2,
   $cassandra_ip,
   $contrail_webui_http_port,
   $contrail_webui_https_port,
@@ -44,6 +45,7 @@ class contrail::webui (
     admin_tenant_name         => $admin_tenant_name,
     auth_port                 => $auth_port,
     auth_protocol             => $auth_protocol,
+    auth_version              => $auth_version,
 #  } ~>
   } ->
   class {'::contrail::webui::service': }
